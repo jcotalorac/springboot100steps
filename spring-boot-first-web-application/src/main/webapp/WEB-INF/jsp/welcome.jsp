@@ -7,6 +7,6 @@
 <title>First Web Application</title>
 </head>
 <body>
-Welcome!!
+Welcome ${name}!!
 </body>
 </html>

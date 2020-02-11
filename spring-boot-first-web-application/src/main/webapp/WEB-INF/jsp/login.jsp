@@ -7,7 +7,7 @@
 <title>First Web Application</title>
 </head>
 <body>
-	<form action="">
+	<form action="" method="post">
 		Name: <input type="text" name="name" />
 		Password: <input type="password" name="password"/>
 		<input type="submit">

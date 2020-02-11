@@ -11,7 +11,6 @@ public class LoginController {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginMessage(ModelMap model) {
 		//model.put("name", name);
-		//System.out.println("name is: " + name);
 		return "login";
 	}
 }

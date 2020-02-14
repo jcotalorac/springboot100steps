@@ -25,6 +25,7 @@ public class LoginController {
 	public String showWelcomePage(ModelMap model, @RequestParam String name, @RequestParam String password) {
 		boolean isValidUser = service.validateUser(name, password);
 		if (!isValidUser) {
+			model.put("errorMessage", "Invalid credentials");
 			return "login";
 		}
 		model.put("name", name);

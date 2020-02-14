@@ -6,8 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.in28minutes.springboot.web.springbootfirstwebapplication.service.LoginService;
+
 @Controller
 public class LoginController {
+	
+	LoginService service;
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String showLoginPage(ModelMap model) {

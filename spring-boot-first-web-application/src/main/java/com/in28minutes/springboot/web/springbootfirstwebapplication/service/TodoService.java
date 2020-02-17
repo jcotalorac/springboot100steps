@@ -16,9 +16,9 @@ public class TodoService {
 	private static int todoCount = 3;
 	
 	static {
-		todos.add(new Todo(1, "in28Minutes", "Learn Spring MVC", new Date(), false));
-		todos.add(new Todo(2, "", "Learn Struts", new Date(), false));
-		todos.add(new Todo(3, "", "Learn Hibernate", new Date(), false));
+		todos.add(new Todo(1, "in28minutes", "Learn Spring MVC", new Date(), false));
+		todos.add(new Todo(2, "in28minutes", "Learn Struts", new Date(), false));
+		todos.add(new Todo(3, "in28minutes", "Learn Hibernate", new Date(), false));
 	}
 	
 	public List<Todo> retrieveTodos(String user) {

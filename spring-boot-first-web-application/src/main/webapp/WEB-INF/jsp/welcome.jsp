@@ -7,6 +7,6 @@
 <title>First Web Application</title>
 </head>
 <body>
-Welcome ${name}!! Your password is ${password}
+Welcome ${name}!! <a href="/list-todos">Click here</a> to manage your todo's
 </body>
 </html>

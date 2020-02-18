@@ -22,4 +22,9 @@ public class TodoController {
 		model.put("todos", todoService.retrieveTodos(name));
 		return "list-todos";
 	}
+	
+	@RequestMapping(value = "/add-todo", method = RequestMethod.GET)
+	public String addTodo(ModelMap model) {
+		return "add-todo";
+	}
 }

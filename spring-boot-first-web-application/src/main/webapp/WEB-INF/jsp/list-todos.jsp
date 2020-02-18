@@ -7,8 +7,8 @@
 <title>First Web Application</title>
 </head>
 <body>
-Here are the list of your todo's: ${todos}
+Here are the list of ${name}'s todos: ${todos}
 <br>
-Your name is: ${name}
+<a href="/add-todo">Add a Todo</a>
 </body>
 </html>

@@ -24,6 +24,11 @@ public class TodoController {
 	}
 	
 	@RequestMapping(value = "/add-todo", method = RequestMethod.GET)
+	public String showaAddTodoPage(ModelMap model) {
+		return "todo";
+	}
+	
+	@RequestMapping(value = "add-todo", method = RequestMethod.POST)
 	public String addTodo(ModelMap model) {
 		return "todo";
 	}

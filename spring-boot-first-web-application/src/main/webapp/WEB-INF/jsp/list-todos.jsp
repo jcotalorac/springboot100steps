@@ -8,5 +8,7 @@
 </head>
 <body>
 Here are the list of your todo's: ${todos}
+<br>
+Your name is: ${name}
 </body>
 </html>

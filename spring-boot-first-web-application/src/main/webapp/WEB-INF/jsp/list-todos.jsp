@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Todo's for ${name}</title>
+<link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 	<h1>Your Todos</h1>
@@ -30,5 +31,9 @@
 	</table>
 	<br>
 	<a href="/add-todo">Add a Todo</a>
+	
+	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
 </body>
 </html>

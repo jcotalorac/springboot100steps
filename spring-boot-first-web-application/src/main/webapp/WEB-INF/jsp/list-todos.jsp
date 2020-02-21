@@ -12,7 +12,7 @@
 	<div class="container">
 	
 		<h1>Your Todos</h1>
-		<table class="table">
+		<table class="table table-striped">
 			<caption>Your todos are</caption>
 			<thead>
 				<tr>

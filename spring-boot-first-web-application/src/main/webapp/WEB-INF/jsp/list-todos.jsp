@@ -19,6 +19,7 @@
 					<th>Description</th>
 					<th>Target Date</th>
 					<th>Is it Done?</th>
+					<th>Delete</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -27,6 +28,7 @@
 						<td>${todo.desc}</td>
 						<td>${todo.date}</td>
 						<td>${todo.done}</td>
+						<td><a type="button" class="btn btn-warning">DELETE</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

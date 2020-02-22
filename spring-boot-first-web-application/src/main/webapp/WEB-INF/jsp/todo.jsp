@@ -10,8 +10,6 @@
 </head>
 <body>
 	<div class="container">
-		Add todo page for ${name}
-
 		<form action="" method="post">
 			<fieldset class="form-group">
 				<label>Description</label>

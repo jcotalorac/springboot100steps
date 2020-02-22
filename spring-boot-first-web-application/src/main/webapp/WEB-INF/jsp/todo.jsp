@@ -17,7 +17,7 @@
 				<label>Description</label>
 				<input name="desc" type="text" class="form-control"/>
 			</fieldset>
-			<input type="submit" />
+			<button type="submit" class="btn btn-success">Add</button>
 		</form>
 	</div>
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>

@@ -13,7 +13,7 @@
 		<form action="" method="post">
 			<fieldset class="form-group">
 				<label>Description</label>
-				<input name="desc" type="text" class="form-control"/>
+				<input name="desc" type="text" class="form-control" required="required"/>
 			</fieldset>
 			<button type="submit" class="btn btn-success">Add</button>
 		</form>

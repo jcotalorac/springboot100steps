@@ -13,10 +13,11 @@
 		Add todo page for ${name}
 
 		<form action="" method="post">
-			<fieldset>
+			<fieldset class="form-group">
 				<label>Description</label>
-				<input name="desc" type="text" /> <input type="submit" />
+				<input name="desc" type="text" class="form-control"/>
 			</fieldset>
+			<input type="submit" />
 		</form>
 	</div>
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>

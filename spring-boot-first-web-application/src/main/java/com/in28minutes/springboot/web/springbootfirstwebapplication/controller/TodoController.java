@@ -60,7 +60,8 @@ public class TodoController {
 	}
 	
 	@RequestMapping(value = "/update-todo", method = RequestMethod.POST)
-	public String updateTodo(@Valid Todo todo, BindingResult result) {
+	public String updateTodo(@Valid Todo todo, BindingResult result, ModelMap model) {
+		todo.setUser((String) model.getAttribute("name"));
 		if (result.hasErrors()) {
 			return "todo";
 		}

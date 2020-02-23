@@ -56,7 +56,8 @@ public class TodoService {
 	}
 	
 	public void updateTodo(Todo todo) {
-		todos.remove(todo);
+		Todo removedTodo = retrieveTodo(todo.getId());
+		System.out.println("Removed: " + todos.remove(removedTodo));
 		todos.add(todo);
 	}
 	

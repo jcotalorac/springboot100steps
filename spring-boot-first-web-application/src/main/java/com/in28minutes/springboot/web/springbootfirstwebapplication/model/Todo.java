@@ -2,10 +2,14 @@ package com.in28minutes.springboot.web.springbootfirstwebapplication.model;
 
 import java.util.Date;
 
+import javax.validation.constraints.Size;
+
 public class Todo {
 
 	private int id;
 	private String user;
+	
+	@Size(min=10, message="Add at least 10 characters")
 	private String desc;
 	private Date date;
 	private boolean isDone;

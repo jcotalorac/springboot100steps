@@ -2,6 +2,8 @@ package com.in28minutes.springboot.web.springbootfirstwebapplication.controller;
 
 import java.util.Date;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -34,7 +36,7 @@ public class TodoController {
 	}
 	
 	@RequestMapping(value = "/add-todo", method = RequestMethod.POST)
-	public String addTodo(ModelMap model, Todo todo) {
+	public String addTodo(ModelMap model, @Valid Todo todo) {
 		todoService.addTodo((String) model.get("name"), todo.getDesc(), new Date(), false);
 		return "redirect:/list-todos";
 	}

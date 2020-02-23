@@ -28,7 +28,7 @@
 				<c:forEach items="${todos}" var="todo">
 					<tr>
 						<td>${todo.desc}</td>
-						<td><fmt:formatDate value="${todo.date}"></fmt:formatDate></td>
+						<td><fmt:formatDate value="${todo.date}" pattern="dd/MM/yyyy"></fmt:formatDate></td>
 						<td>${todo.done}</td>
 						<td><a type="button" class="btn btn-success" href="/update-todo?id=${todo.id}">UPDATE</a></td>
 						<td><a type="button" class="btn btn-warning" href="/delete-todo?id=${todo.id}">DELETE</a></td>

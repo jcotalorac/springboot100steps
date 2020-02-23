@@ -45,7 +45,7 @@ public class TodoService {
 		}
 	}
 	
-	public Todo updateTodo(int id) {
+	public Todo retrieveTodo(int id) {
 		for (Iterator<Todo> iterator = todos.iterator(); iterator.hasNext();) {
 			Todo todo = (Todo) iterator.next();
 			if (todo.getId() == id) {

@@ -61,10 +61,10 @@ public class TodoController {
 	
 	@RequestMapping(value = "/update-todo", method = RequestMethod.POST)
 	public String updateTodo(@Valid Todo todo, BindingResult result, ModelMap model) {
-		todo.setUser((String) model.getAttribute("name"));
 		if (result.hasErrors()) {
 			return "todo";
 		}
+		todo.setUser((String) model.get("name"));
 		todoService.updateTodo(todo);
 		return "redirect:/list-todos";
 	}

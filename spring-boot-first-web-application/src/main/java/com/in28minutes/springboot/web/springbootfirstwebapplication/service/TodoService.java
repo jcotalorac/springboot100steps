@@ -45,5 +45,15 @@ public class TodoService {
 		}
 	}
 	
+	public Todo updateTodo(int id) {
+		for (Iterator<Todo> iterator = todos.iterator(); iterator.hasNext();) {
+			Todo todo = (Todo) iterator.next();
+			if (todo.getId() == id) {
+				return todo;
+			}
+		}
+		return null;
+	}
+	
 	
 }

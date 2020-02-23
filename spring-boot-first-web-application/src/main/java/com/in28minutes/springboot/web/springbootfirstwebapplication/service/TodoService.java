@@ -55,5 +55,10 @@ public class TodoService {
 		return null;
 	}
 	
+	public void updateTodo(Todo todo) {
+		todos.remove(todo);
+		todos.add(todo);
+	}
+	
 	
 }

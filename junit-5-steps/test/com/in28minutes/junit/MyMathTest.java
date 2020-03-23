@@ -12,6 +12,6 @@ public class MyMathTest {
 
 		int result = myMath.sum(new int[] { 1, 2, 3 });
 
-		assertEquals(5, result);
+		assertEquals(6, result);
 	}
 }

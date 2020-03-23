@@ -16,13 +16,13 @@ public class MyMathTest {
 	
 	@Test
 	public void sumWith3Numbers() {
-
+		System.out.println("Test1");
 		assertEquals(6, myMath.sum(new int[] { 1, 2, 3 }));
 	}
 
 	@Test
 	public void sumWith1Number() {
-
+		System.out.println("Test2");
 		assertEquals(3, myMath.sum(new int[] { 3 }));
 	}
 }

@@ -3,7 +3,9 @@ package com.in28minutes.junit;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class MyMathTest {
@@ -18,6 +20,16 @@ public class MyMathTest {
 	@After
 	public void after() {
 		System.out.println("After");
+	}
+	
+	@BeforeClass
+	public static void beforeClass() {
+		System.out.println("Before class");
+	}
+	
+	@AfterClass
+	public static void afterClass() {
+		System.out.println("After class");
 	}
 	
 	@Test

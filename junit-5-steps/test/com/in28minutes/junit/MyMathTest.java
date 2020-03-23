@@ -2,12 +2,18 @@ package com.in28minutes.junit;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class MyMathTest {
 
 	MyMath myMath = new MyMath();
 
+	@Before
+	public void before() {
+		System.out.println("Before");
+	}
+	
 	@Test
 	public void sumWith3Numbers() {
 

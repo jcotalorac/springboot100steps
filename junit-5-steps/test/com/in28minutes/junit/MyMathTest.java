@@ -2,6 +2,7 @@ package com.in28minutes.junit;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,6 +13,11 @@ public class MyMathTest {
 	@Before
 	public void before() {
 		System.out.println("Before");
+	}
+	
+	@After
+	public void after() {
+		System.out.println("After");
 	}
 	
 	@Test

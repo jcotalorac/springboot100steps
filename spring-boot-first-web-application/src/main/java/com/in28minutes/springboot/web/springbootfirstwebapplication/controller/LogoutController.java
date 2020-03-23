@@ -1,0 +1,8 @@
+package com.in28minutes.springboot.web.springbootfirstwebapplication.controller;
+
+public class LogoutController {
+
+	public String logout() {
+		return "";
+	}
+}

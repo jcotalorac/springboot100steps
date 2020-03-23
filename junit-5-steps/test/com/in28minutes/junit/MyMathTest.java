@@ -14,4 +14,13 @@ public class MyMathTest {
 
 		assertEquals(6, result);
 	}
+
+	@Test
+	public void sumWith1Number() {
+		MyMath myMath = new MyMath();
+
+		int result = myMath.sum(new int[] { 3 });
+
+		assertEquals(3, result);
+	}
 }

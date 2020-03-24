@@ -1,6 +1,7 @@
 package com.in28minutes.mockito.mockitodemo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import org.junit.Test;
@@ -24,6 +25,15 @@ public class SomeBusinessMockAnnotationsTest {
 
 		int result = businessImpl.findGreatestFromAllData();
 		assertEquals(24, result);
+	}
+	
+	@Test
+	public void testFindGreatestFromAllDataForOneValue() {
+
+		when(dataServiceMock.retrieveAllData()).thenReturn(new int[] { 15 });
+
+		int result = businessImpl.findGreatestFromAllData();
+		assertEquals(15, result);
 	}
 
 }

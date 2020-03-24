@@ -23,6 +23,7 @@ public class ListTest {
 		Mockito.when(listMock.size()).thenReturn(10).thenReturn(20);
 		assertEquals(10, listMock.size());
 		assertEquals(20, listMock.size());
+		assertEquals(20, listMock.size());
 	}
 
 }

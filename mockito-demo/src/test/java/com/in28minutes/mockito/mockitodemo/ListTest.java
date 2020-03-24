@@ -33,5 +33,13 @@ public class ListTest {
 		assertEquals("SomeString", listMock.get(0));
 		assertEquals(null, listMock.get(1));
 	}
+	
+	@Test
+	public void testGetGenericParameter() {
+		List listMock = Mockito.mock(List.class);
+		Mockito.when(listMock.get(Mockito.anyInt())).thenReturn("SomeString");
+		assertEquals("SomeString", listMock.get(0));
+		assertEquals("SomeString", listMock.get(1));
+	}
 
 }

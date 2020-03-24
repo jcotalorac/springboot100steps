@@ -10,7 +10,7 @@ import org.mockito.Mockito;
 public class ListTest {
 
 	@Test
-	public void test() {
+	public void testSize() {
 		List listMock = Mockito.mock(List.class);
 		Mockito.when(listMock.size()).thenReturn(10);
 		assertEquals(10, listMock.size());

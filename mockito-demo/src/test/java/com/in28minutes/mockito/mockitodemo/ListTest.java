@@ -25,5 +25,13 @@ public class ListTest {
 		assertEquals(20, listMock.size());
 		assertEquals(20, listMock.size());
 	}
+	
+	@Test
+	public void testGet() {
+		List listMock = Mockito.mock(List.class);
+		Mockito.when(listMock.get(0)).thenReturn("SomeString");
+		assertEquals("SomeString", listMock.get(0));
+		assertEquals(null, listMock.get(1));
+	}
 
 }

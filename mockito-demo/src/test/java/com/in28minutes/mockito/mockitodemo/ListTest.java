@@ -14,6 +14,7 @@ public class ListTest {
 		List listMock = Mockito.mock(List.class);
 		Mockito.when(listMock.size()).thenReturn(10);
 		assertEquals(10, listMock.size());
+		assertEquals(10, listMock.size());
 	}
 	
 	@Test

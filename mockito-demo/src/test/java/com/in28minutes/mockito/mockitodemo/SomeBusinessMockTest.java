@@ -18,5 +18,16 @@ public class SomeBusinessMockTest {
 		int result = businessImpl.findGreatestFromAllData();
 		assertEquals(24, result);
 	}
+	
+	@Test
+	public void testFindGreatestFromAllDataForOneValue() {
+
+		DataService dataServiceMock = mock(DataService.class);
+		when(dataServiceMock.retrieveAllData()).thenReturn(new int[] { 15 });
+
+		SomeBusinessImpl businessImpl = new SomeBusinessImpl(dataServiceMock);
+		int result = businessImpl.findGreatestFromAllData();
+		assertEquals(15, result);
+	}
 
 }

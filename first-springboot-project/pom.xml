@@ -6,6 +6,12 @@
 	<artifactId>first-springboot-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-framework-starter-parent</artifactId>
+		<version>1.4.0.RELEASE</version>
+	</parent>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>

@@ -27,7 +27,7 @@ public class ListTest {
 	}
 	
 	@Test
-	public void testGet() {
+	public void testGetSpecificParameter() {
 		List listMock = Mockito.mock(List.class);
 		Mockito.when(listMock.get(0)).thenReturn("SomeString");
 		assertEquals("SomeString", listMock.get(0));

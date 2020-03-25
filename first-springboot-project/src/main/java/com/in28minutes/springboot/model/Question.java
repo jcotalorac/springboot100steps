@@ -9,6 +9,10 @@ public class Question {
 	private String correctAnswer;
 	private List<String> options;
 
+	public Question() {
+		super();
+	}
+
 	public Question(String id, String description, String correctAnswer, List<String> options) {
 		super();
 		this.id = id;

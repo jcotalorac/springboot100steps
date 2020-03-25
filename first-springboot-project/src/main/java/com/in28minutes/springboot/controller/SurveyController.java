@@ -18,6 +18,6 @@ public class SurveyController {
 	
 	@GetMapping("/surveys/{surveyId}/questions")
 	public List<Question> retrieveQuestionsForSurvey(@PathVariable String surveyId) {
-		return null;
+		return surveyService.retrieveQuestions(surveyId);
 	}
 }

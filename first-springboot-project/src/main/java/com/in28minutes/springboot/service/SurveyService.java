@@ -6,9 +6,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.in28minutes.springboot.model.Question;
 import com.in28minutes.springboot.model.Survey;
 
+@Component
 public class SurveyService {
 
 	private static List<Survey> surveys = new ArrayList<Survey>();

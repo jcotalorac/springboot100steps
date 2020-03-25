@@ -59,10 +59,7 @@ public class Question {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((correctAnswer == null) ? 0 : correctAnswer.hashCode());
-		result = prime * result + ((description == null) ? 0 : description.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((options == null) ? 0 : options.hashCode());
 		return result;
 	}
 
@@ -75,25 +72,10 @@ public class Question {
 		if (getClass() != obj.getClass())
 			return false;
 		Question other = (Question) obj;
-		if (correctAnswer == null) {
-			if (other.correctAnswer != null)
-				return false;
-		} else if (!correctAnswer.equals(other.correctAnswer))
-			return false;
-		if (description == null) {
-			if (other.description != null)
-				return false;
-		} else if (!description.equals(other.description))
-			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
-			return false;
-		if (options == null) {
-			if (other.options != null)
-				return false;
-		} else if (!options.equals(other.options))
 			return false;
 		return true;
 	}

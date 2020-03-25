@@ -20,6 +20,6 @@ public class WelcomeController {
 @Component
 class WelcomeService {
 	public String retrieveWelcomeMessage() {
-		return "Good Morning!";
+		return "Good Morning updated!";
 	}
 }

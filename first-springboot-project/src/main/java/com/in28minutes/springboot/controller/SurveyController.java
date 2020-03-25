@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.in28minutes.springboot.model.Question;
+import com.in28minutes.springboot.model.Survey;
 import com.in28minutes.springboot.service.SurveyService;
 
 @RestController
@@ -43,5 +44,10 @@ public class SurveyController {
 	@GetMapping("/surveys/{surveyId}/questions/{questionId}")
 	public Question retrieveDetailsForQuestion(@PathVariable String surveyId, @PathVariable String questionId) {
 		return surveyService.retrieveQuestion(surveyId, questionId);
+	}
+	
+	@GetMapping("/surveys")
+	public List<Survey> retrieveAllSurveys() {
+		return surveyService.retrieveAllSurveys();
 	}
 }

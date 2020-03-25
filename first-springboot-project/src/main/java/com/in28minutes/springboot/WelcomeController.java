@@ -16,10 +16,3 @@ public class WelcomeController {
 		return service.retrieveWelcomeMessage();
 	}
 }
-
-//@Component
-class WelcomeService {
-	public String retrieveWelcomeMessage() {
-		return "Good Morning updated!";
-	}
-}

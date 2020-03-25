@@ -5,8 +5,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.in28minutes.service.WelcomeService;
-
 @RestController
 public class WelcomeController {
 	

@@ -17,7 +17,7 @@ public class WelcomeController {
 	}
 }
 
-@Component
+//@Component
 class WelcomeService {
 	public String retrieveWelcomeMessage() {
 		return "Good Morning updated!";

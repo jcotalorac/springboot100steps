@@ -1,5 +1,6 @@
 package com.in28minutes.springboot;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ public class WelcomeController {
 	private WelcomeService service;
 	
 	@Autowired
-	private BasicConfiguration basicConfiguration;
+	private BasicConfiguration configuration;
 
 	@RequestMapping("/welcome")
 	public String welcome() {
@@ -24,6 +25,11 @@ public class WelcomeController {
 	
 	@RequestMapping("/dynamic-configuration")
 	public Map dynamicConfiguration() {
-		return null;
+		Map map = new HashMap<>();
+		
+		map.put("message", configuration.getMessage());
+		map.put("number", configuration.hashCode());
+		map.put("value", configuration.isValue());
+		return map;
 	}
 }

@@ -17,6 +17,7 @@ public class WelcomeController {
 		return service.retrieveWelcomeMessage();
 	}
 	
+	@RequestMapping("/dynamic-configuration")
 	public Map dynamicConfiguration() {
 		return null;
 	}

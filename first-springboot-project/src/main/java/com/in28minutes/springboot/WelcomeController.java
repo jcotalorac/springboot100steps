@@ -11,10 +11,10 @@ import com.in28minutes.springboot.configuration.BasicConfiguration;
 
 @RestController
 public class WelcomeController {
-	
+
 	@Autowired
 	private WelcomeService service;
-	
+
 	@Autowired
 	private BasicConfiguration configuration;
 
@@ -22,14 +22,15 @@ public class WelcomeController {
 	public String welcome() {
 		return service.retrieveWelcomeMessage();
 	}
-	
+
 	@RequestMapping("/dynamic-configuration")
 	public Map dynamicConfiguration() {
 		Map map = new HashMap<>();
-		
+
 		map.put("message", configuration.getMessage());
-		map.put("number", configuration.hashCode());
+		map.put("number", configuration.getNumber());
 		map.put("value", configuration.isValue());
+
 		return map;
 	}
 }

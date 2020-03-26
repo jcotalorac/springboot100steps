@@ -20,6 +20,10 @@ public class UserCommandLineRunner implements CommandLineRunner {
 		repository.save(new User("Ravi", "User"));
 		repository.save(new User("Satish", "Admin"));
 		repository.save(new User("Raghu", "User"));
+		
+		for (User user : repository.findAll()) {
+			log.info(user.toString());
+		}
 	}
 
 }

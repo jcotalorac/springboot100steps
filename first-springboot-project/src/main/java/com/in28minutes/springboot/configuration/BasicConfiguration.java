@@ -1,5 +1,10 @@
 package com.in28minutes.springboot.configuration;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+@Component
+@ConfigurationProperties("basic")
 public class BasicConfiguration {
 
 	private boolean value;

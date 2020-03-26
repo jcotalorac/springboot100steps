@@ -8,10 +8,14 @@ import org.springframework.stereotype.Component;
 public class UserCommandLineRunner implements CommandLineRunner {
 
 	@Autowired
-	private UserRepository userRepository;
+	private UserRepository repository;
 	
 	@Override
 	public void run(String... args) throws Exception {
+		repository.save(new User("Ranga", "Admin"));
+		repository.save(new User("Ravi", "User"));
+		repository.save(new User("Satish", "Admin"));
+		repository.save(new User("Raghu", "User"));
 	}
 
 }

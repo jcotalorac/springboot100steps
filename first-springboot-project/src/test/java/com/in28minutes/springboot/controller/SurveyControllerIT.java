@@ -1,5 +1,7 @@
 package com.in28minutes.springboot.controller;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.Arrays;
 
 import org.junit.Test;
@@ -35,5 +37,6 @@ public class SurveyControllerIT {
 		
 		ResponseEntity<String> responseEntity = restTemplate.exchange(url, HttpMethod.GET, entityRequest, String.class);
 		System.out.println("Response: " + responseEntity.getBody());
+		assertTrue(responseEntity.getBody().contains("\"id\":\"Question1\""));
 	}
 }

@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import com.in28minutes.springboot.Application;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Application.class)
+@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SurveyControllerIT {
 
 	@Test

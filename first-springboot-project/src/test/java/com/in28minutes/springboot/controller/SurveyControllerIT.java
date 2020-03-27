@@ -19,23 +19,15 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.in28minutes.springboot.Application;
 
-//@RunWith(SpringRunner.class)
-//@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class SurveyControllerIT {
 
-	//@LocalServerPort
+	@LocalServerPort
 	private int port;
 
 	@Test
-	public void testJsonAssert() {
-
-		String actual = "{id:1,name:Ranga}";
-		JSONAssert.assertEquals("{id:1}", actual, true);
-
-	}
-
-	@Test
-	public void test() {
+	public void testRetrieveSurveyQuestion() {
 		String url = "http://localhost:" + port + "/surveys/Survey1/questions/Question1";
 		TestRestTemplate restTemplate = new TestRestTemplate();
 
@@ -46,6 +38,9 @@ public class SurveyControllerIT {
 
 		ResponseEntity<String> responseEntity = restTemplate.exchange(url, HttpMethod.GET, entityRequest, String.class);
 		System.out.println("Response: " + responseEntity.getBody());
+
+		String expected = "{\"id\":\"Question1\",\"description\":\"Largest Country in the World\",\"correctAnswer\":\"Russia\",\"options\":[\"India\",\"Russia\",\"United States\",\"China\"]}";
+		JSONAssert.assertEquals(expected, responseEntity.getBody(), true);
 		assertTrue(responseEntity.getBody().contains("\"id\":\"Question1\""));
 	}
 }

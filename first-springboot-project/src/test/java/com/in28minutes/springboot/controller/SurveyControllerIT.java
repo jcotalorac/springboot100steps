@@ -29,7 +29,7 @@ public class SurveyControllerIT {
 	@Test
 	public void testJsonAssert() {
 
-		String actual = "{id:1,name:Ranga}";
+		String actual = "{id:2,name:Ranga}";
 		JSONAssert.assertEquals("{id:1}", actual, false);
 
 	}

@@ -27,7 +27,7 @@ import com.in28minutes.springboot.model.Question;
 import com.in28minutes.springboot.service.SurveyService;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(SurveyController.class)
+@WebMvcTest(value = SurveyController.class, secure = false)
 public class SurveyControllerTest {
 
 	@Autowired
@@ -62,12 +62,13 @@ public class SurveyControllerTest {
 		when(surveyService.addQuestion(anyString(), any(Question.class))).thenReturn(mockQuestion);
 
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.post("/surveys/Survey1/questions")
-				.accept(MediaType.APPLICATION_JSON).content(questionJsonRequest).contentType(MediaType.APPLICATION_JSON);
-		
+				.accept(MediaType.APPLICATION_JSON).content(questionJsonRequest)
+				.contentType(MediaType.APPLICATION_JSON);
+
 		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
 		MockHttpServletResponse response = result.getResponse();
 		assertEquals(HttpStatus.CREATED.value(), response.getStatus());
-		
+
 		assertEquals("http://localhost/surveys/Survey1/questions/1", response.getHeader(HttpHeaders.LOCATION));
 	}
 

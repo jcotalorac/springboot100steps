@@ -20,14 +20,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.in28minutes.springboot.web.springbootfirstwebapplication.model.Todo;
 import com.in28minutes.springboot.web.springbootfirstwebapplication.service.TodoRepository;
-import com.in28minutes.springboot.web.springbootfirstwebapplication.service.TodoService;
 
 @Controller
 public class TodoController {
 
-	@Autowired
-	TodoService todoService;
-	
 	@Autowired
 	TodoRepository repository;
 
@@ -40,7 +36,7 @@ public class TodoController {
 	@RequestMapping(value = "/list-todos", method = RequestMethod.GET)
 	public String showTodos(ModelMap model) {
 		String name = getLoggedInUserName(model);
-		model.put("todos", todoService.retrieveTodos(name));
+		model.put("todos", repository.findByUser(name));
 		return "list-todos";
 	}
 
@@ -57,24 +53,19 @@ public class TodoController {
 		}
 		todo.setUser(getLoggedInUserName(model));
 		repository.save(todo);
-		//todoService.addTodo(getLoggedInUserName(model), todo.getDesc(), todo.getDate(), false);
 		return "redirect:/list-todos";
 	}
 
 	@RequestMapping(value = "/delete-todo", method = RequestMethod.GET)
 	public String deleteTodo(@RequestParam("id") int id) {
 		
-		if (id ==1) {
-			throw new RuntimeException("Something went wrong");
-		}
-		
-		todoService.deleteTodo(id);
+		repository.deleteById(id);
 		return "redirect:/list-todos";
 	}
 
 	@RequestMapping(value = "/update-todo", method = RequestMethod.GET)
 	public String showUpdateTodoPage(ModelMap model, @RequestParam("id") int id) {
-		Todo todo = todoService.retrieveTodo(id);
+		Todo todo = repository.getOne(id);
 		// model.addAttribute("todo", todo);
 		model.put("todo", todo);
 		return "todo";
@@ -86,7 +77,7 @@ public class TodoController {
 			return "todo";
 		}
 		todo.setUser(getLoggedInUserName(model));
-		todoService.updateTodo(todo);
+		repository.save(todo);
 		return "redirect:/list-todos";
 	}
 	

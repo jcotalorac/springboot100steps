@@ -1,12 +1,14 @@
 package com.in28minutes.learning.jpa.jpain10steps.service;
 
 import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
 import com.in28minutes.learning.jpa.jpain10steps.entity.User;
 
 @Repository
+@Transactional
 public class UserDAOService {
 
 	private EntityManager entityManager;
